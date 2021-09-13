@@ -33,8 +33,16 @@ int proceed() {
      	pid_t pid = fork();
 	if (pid == 0) {
 		execvp(argv[0], argv);
+		free(line);
+		for (int i = 0; i < space + 1; ++i) {
+			free(argv + i);
+		}
 		return 0;
 	} else {
+		free(line);
+		for (int i = 0; i < space + 1; ++i) {
+			free(argv + i);
+		}
 	       return proceed();
 	}
 	
