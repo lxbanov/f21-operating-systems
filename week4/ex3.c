@@ -16,9 +16,15 @@ int proceed() {
      	pid_t pid = fork();
 	if (pid == 0) {
 		execvp(argv[0], argv);
+		free(line);
+		free(argv[0]);
+		free(argv[1]);
 		return 0;
 	} else {
-	       return proceed();
+		free(line);
+		free(argv[0]);
+		free(argv[1]);
+	    return proceed();
 	}
 	
 }
@@ -27,4 +33,3 @@ int main(int argc, char* argv[], char* env[]) {
 	printf("Terminal emulator\nType 'quit' to stop the process\n");
 	proceed();
 }
-
