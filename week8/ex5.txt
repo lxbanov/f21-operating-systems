@@ -1,0 +1,3 @@
+Physical address means than program data is stored in exact cell of the RAM. For example, if the address of your variable is 0xFF, then it means that it is stored in the 256-cell of your RAM.
+
+When you have a virtual address, it means that the programm is mapped via special table (page table) to some place in the memory. It is common that the actual physical address of the programm differs a lot. There is also a case when the portion of memory that is mapped via virtual address is not in the RAM at the moment, but stored on the disc. So, virtual memory expands the memory boundaries and provides each program with isolated porion of the memory
