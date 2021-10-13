@@ -1,0 +1,9 @@
+The miss ratio is proportional to the number of distinct references occurred.
+E.g. for the input 1, 2, 3, 4, ... n - 1, n the Miss Ratio will be 1
+
+Or, it can be thought in another way, if we have page count = N, then the miss ratio
+will depend on the average number of distinct references in each N sized subarray of the input array
+
+On the other hand, the hit ratio is proportional to the number of the same references occurred.
+Or, similarly to miss ration, it can be thought as average number of pairs of the same references of the input array
+
