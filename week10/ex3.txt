@@ -1,0 +1,9 @@
+$ touch _ex3.txt
+$ sudo chmod -x _ex3.txt
+$ sudo chmod u=rwx _ex3.txt
+$ sudo chmod o=rwx _ex3.txt
+$ sudo chmod g=rwx _ex3.txt
+
+660 means that owner and group can read and write, others can't do anything.
+775 means that owner and group can do anything, others can only read and execute.
+777 means every user can do anything.
